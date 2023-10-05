@@ -4,6 +4,13 @@
   --light-grey: #232323;
   --white: #fff;
 }
+.library::-webkit-scrollbar{
+  display: none;
+}
+.main-content::-webkit-scrollbar{
+  display: none;
+}
+
 body,
 html {
   height: 100%;
@@ -32,7 +39,6 @@ a {
 .sidebar {
   flex: 0.25;
   overflow-y: auto;
-
   display: flex;
   flex-direction: column;
   margin-right: 0.5rem;
@@ -283,4 +289,49 @@ a {
 
 .timeline-slider:focus::-webkit-slider-runnable-track {
   background: #ccc;
+}
+@media screen and (max-width:600px) {
+  .top-icons{
+    display: inline-flex;
+  }
+  .player{
+    display: inline-flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: auto;
+    width: -50%;
+  }
+  .main-content{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100vw;
+  }
+  .link-flex{
+      display: none !important;
+      align-items: center;
+  }
+  .sidebar{
+    display: none;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0%;
+    padding: 0%;
+  }
+  .library::-webkit-scrollbar{
+    display: none;
+  }
+  .player-center{
+    display: inline-flex;
+    width: 100%;
+  }
+  .volume-controls{
+    display: none;
+  }
 }
